@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SPLUS.CommonService.props" />
+</Project>

@@ -1,0 +1,6 @@
+@SPLUS.Tenant.Api_HostAddress = http://localhost:5150
+
+GET {{SPLUS.Tenant.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

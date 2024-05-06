@@ -1,0 +1,40 @@
+
+
+using Core.Settings;
+using Infrastructure.Services;
+using Infrastructure.Extensions;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+//builder.Services.AddScoped<IShoeRepository, ShoeRepository>();
+builder.Services.AddTransient<ITenantService, TenantService>();
+builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.Configure<TenantSettings>(builder.Configuration.GetSection(nameof(TenantSettings)));
+builder.Services.AddAndMigrateTenantDatabases(builder.Configuration);
+
+//builder.Services.AddJwtAuthentication();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
