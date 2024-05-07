@@ -22,3 +22,16 @@ D:\TNTech-Project\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\De
 D:\TNTech-Project\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\refint\JwtTokenAuthentication.dll
 D:\TNTech-Project\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\JwtTokenAuthentication.pdb
 D:\TNTech-Project\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\ref\JwtTokenAuthentication.dll
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\bin\Debug\net8.0\JwtTokenAuthentication.deps.json
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\bin\Debug\net8.0\JwtTokenAuthentication.dll
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\bin\Debug\net8.0\JwtTokenAuthentication.pdb
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\JwtTokenAuthentication.csproj.AssemblyReference.cache
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\JwtTokenAuthentication.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\JwtTokenAuthentication.AssemblyInfoInputs.cache
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\JwtTokenAuthentication.AssemblyInfo.cs
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\JwtTokenAuthentication.csproj.CoreCompileInputs.cache
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\JwtTokenAuthentication.sourcelink.json
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\JwtTokenAuthentication.dll
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\refint\JwtTokenAuthentication.dll
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\JwtTokenAuthentication.pdb
+D:\Project\git\SPLUS-microservice\SPLUS.Gateway\JwtTokenAuthentication\obj\Debug\net8.0\ref\JwtTokenAuthentication.dll
