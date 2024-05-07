@@ -11,8 +11,8 @@ namespace AuthApi
     {
         private readonly List<User> _users = new()
         {
-            new("admin", "123456", "Administrator", new[] { "shoes.read" }),
-            new("user01", "u$3r01", "User", new[] { "shoes.read" })
+            new("admin", "123456", "Administrator", "alpha", new[] { "shoes.read" }),
+            new("user01", "u$3r01", "User", "alpha", new[] { "shoes.read" })
         };
 
         public AuthenticationToken? GenerateAuthToken(LoginModel loginModel)
@@ -32,6 +32,7 @@ namespace AuthApi
             {
                 new Claim(JwtRegisteredClaimNames.Name, user.Username),
                 new Claim("role", user.Role),
+                new Claim("tenant", user.Tenant),
                 new Claim("scope", string.Join(" ", user.Scopes))
             };
 

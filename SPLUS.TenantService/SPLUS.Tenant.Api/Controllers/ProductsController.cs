@@ -13,12 +13,20 @@ namespace SPLUS.Tenant.Api.Controllers
         {
             _service = service;
         }
-        [HttpGet]
+        //[HttpGet]
+        //public async Task<IActionResult> GetAsync(int id)
+        //{
+        //    var productDetails = await _service.GetByIdAsync(id);
+        //    return Ok(productDetails);
+        //}
+
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> GetAsync(int id)
         {
             var productDetails = await _service.GetByIdAsync(id);
             return Ok(productDetails);
         }
+
         [HttpPost]
         public async Task<IActionResult> CreateAsync(CreateProductRequest request)
         {

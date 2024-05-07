@@ -37,10 +37,10 @@ namespace Infrastructure.Extensions
                 using var scope = services.BuildServiceProvider().CreateScope();
                 var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
                 dbContext.Database.SetConnectionString(connectionString);
-                if (dbContext.Database.GetMigrations().Count() > 0)
-                {
-                    dbContext.Database.Migrate();
-                }
+                //if (dbContext.Database.GetMigrations().Count() > 0)
+                //{
+                //    dbContext.Database.Migrate();
+                //}
             }
             return services;
         }

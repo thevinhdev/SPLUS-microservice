@@ -1,8 +1,11 @@
-﻿using Core.Settings;
+﻿using Azure.Core;
+using Core.Settings;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,14 +32,26 @@ namespace Infrastructure.Services
             _httpContext = contextAccessor.HttpContext;
             if (_httpContext != null)
             {
-                if (_httpContext.Request.Headers.TryGetValue("tenant", out var tenantId))
+                string authHeader = _httpContext.Request.Headers["Authorization"];
+                if (authHeader != null && authHeader.StartsWith("Bearer"))
                 {
-                    SetTenant(tenantId);
+                    var handler = new JwtSecurityTokenHandler();
+                    authHeader = authHeader.Replace("Bearer ", "").Trim();
+                    var jsonToken = handler.ReadToken(authHeader);
+                    var token = handler.ReadToken(authHeader) as JwtSecurityToken;
+                    string tenant = token.Claims.First(claim => claim.Type == "tenant").Value;
+
+                    if(string.IsNullOrEmpty(tenant)) throw new Exception("Invalid Tenant!");
+                    SetTenant(tenant);
                 }
-                else
-                {
-                    throw new Exception("Invalid Tenant!");
-                }
+                //if (_httpContext.Request.Headers.TryGetValue("tenant", out var tenantId))
+                //{
+                //    SetTenant(tenantId);
+                //}
+                //else
+                //{
+                //    throw new Exception("Invalid Tenant!");
+                //}
             }
         }
 
