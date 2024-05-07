@@ -36,3 +36,5 @@ packages/
 /ES.CCISCloud/src/ES.CCISCloud.Host/wwwroot/*
 /ES.CCISCloud/src/ES.CCISCloud.Host/Resource/
 /ES.CCISCloud/test/TestProject/TestProject/Resource
+
+/SPLUS.Tenant.Api/obj
