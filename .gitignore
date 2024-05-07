@@ -1,0 +1,38 @@
+#Ignore thumbnails created by Windows
+Thumbs.db
+#Ignore files built by Visual Studio
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+.vs/
+#Nuget packages folder
+packages/
+/ES.CCISCloud/_workspaces.db
+/ES.CCISCloud/src/ES.CCISCloud.Host/Logs/Serilogs
+/ES.CCISCloud/src/ES.CCISCloud.CongThanhToan/Logs/Serilogs
+/ES.CCISCloud/src/ES.CCISCloud.Host/Resource/BaoCao
+/ES.CCISCloud/src/ES.CCISCloud.Host/wwwroot/*
+/ES.CCISCloud/src/ES.CCISCloud.Host/Resource/
+/ES.CCISCloud/test/TestProject/TestProject/Resource
