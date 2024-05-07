@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SPLUS.CommonService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df188a33ff68efd055f729d400ca18a9224c76c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SPLUS.CommonService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SPLUS.CommonService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
