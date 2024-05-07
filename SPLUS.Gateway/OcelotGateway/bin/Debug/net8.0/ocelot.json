@@ -45,6 +45,38 @@
       //"RouteClaimsRequirement": {
       //  "Role": "Administrator"
       //}
+    },
+    {
+      "UpstreamPathTemplate": "/api-gateway/Products/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Products/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+        //"AllowedScopes": [ "shoe.read" ]
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api-gateway/Shoes/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Shoes/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer"
+        //"AllowedScopes": [ "shoe.read" ]
+      }
     }
   ],
   "GlobalConfiguration": {

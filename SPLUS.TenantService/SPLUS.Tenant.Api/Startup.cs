@@ -25,6 +25,7 @@ namespace SPLUS.Tenant.Api
             });
             services.AddTransient<ITenantService, TenantService>();
             services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IShoeService, ShoeService>();
             services.Configure<TenantSettings>(config.GetSection(nameof(TenantSettings)));
             services.AddAndMigrateTenantDatabases(config);
         }

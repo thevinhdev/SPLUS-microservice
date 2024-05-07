@@ -11,8 +11,8 @@ namespace AuthApi
     {
         private readonly List<User> _users = new()
         {
-            new("admin", "123456", "Administrator", "alpha", new[] { "shoes.read" }),
-            new("user01", "u$3r01", "User", "alpha", new[] { "shoes.read" })
+            new("admin", "123456", "Administrator", "beta", new[] { "shoes.read" }),
+            new("user01", "u$3r01", "User", "beta", new[] { "shoes.read" })
         };
 
         public AuthenticationToken? GenerateAuthToken(LoginModel loginModel)
