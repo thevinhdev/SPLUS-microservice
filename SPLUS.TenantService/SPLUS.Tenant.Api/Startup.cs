@@ -2,6 +2,7 @@
 using SPLUS.Tenant.Infrastructure.Settings;
 using SPLUS.Tenant.Application.Products;
 using SPLUS.Tenant.Application.Shoes;
+using Infrastructure.Extensions;
 using Infrastructure.Services;
 
 namespace SPLUS.Tenant.Api
