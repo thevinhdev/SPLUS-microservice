@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SPLUS.Tenant.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2aef24a9a49fadc8119f2c782b49701b5760ba03")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+408c8cc5bba78fe099e8dde67cf4cafa74d628ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("SPLUS.Tenant.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SPLUS.Tenant.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
