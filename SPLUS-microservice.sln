@@ -5,10 +5,6 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SPLUS.Gateway", "SPLUS.Gateway", "{D90642D4-D1E1-4518-8981-128AFF4A5FBF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SPLUS.CommonService", "SPLUS.CommonService", "{D46EE5CA-4658-4BDC-8446-840FA1235DC4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPLUS.CommonService", "SPLUS.CommonService\SPLUS.CommonService\SPLUS.CommonService.csproj", "{A13E33EA-1CCD-457C-8567-AFDBDC66426C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtTokenAuthentication", "SPLUS.Gateway\JwtTokenAuthentication\JwtTokenAuthentication.csproj", "{5902C696-2D08-4E0A-94DF-EDFE5B722DE6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotGateway", "SPLUS.Gateway\OcelotGateway\OcelotGateway.csproj", "{80F54752-78A5-4659-B3E0-037499DD2CB6}"
@@ -31,10 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A13E33EA-1CCD-457C-8567-AFDBDC66426C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A13E33EA-1CCD-457C-8567-AFDBDC66426C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A13E33EA-1CCD-457C-8567-AFDBDC66426C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A13E33EA-1CCD-457C-8567-AFDBDC66426C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5902C696-2D08-4E0A-94DF-EDFE5B722DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5902C696-2D08-4E0A-94DF-EDFE5B722DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5902C696-2D08-4E0A-94DF-EDFE5B722DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -68,7 +60,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A13E33EA-1CCD-457C-8567-AFDBDC66426C} = {D46EE5CA-4658-4BDC-8446-840FA1235DC4}
 		{5902C696-2D08-4E0A-94DF-EDFE5B722DE6} = {D90642D4-D1E1-4518-8981-128AFF4A5FBF}
 		{80F54752-78A5-4659-B3E0-037499DD2CB6} = {D90642D4-D1E1-4518-8981-128AFF4A5FBF}
 		{5FC6D106-4FBF-4A84-B8CA-AE20E4B53A66} = {D90642D4-D1E1-4518-8981-128AFF4A5FBF}
