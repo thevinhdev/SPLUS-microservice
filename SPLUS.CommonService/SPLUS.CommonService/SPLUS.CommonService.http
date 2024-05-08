@@ -1,6 +1,0 @@
-@SPLUS.CommonService_HostAddress = http://localhost:5230
-
-GET {{SPLUS.CommonService_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
