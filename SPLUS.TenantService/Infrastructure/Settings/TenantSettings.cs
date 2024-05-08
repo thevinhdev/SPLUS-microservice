@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Settings
+namespace SPLUS.Tenant.Infrastructure.Settings
 {
     public class TenantSettings
     {

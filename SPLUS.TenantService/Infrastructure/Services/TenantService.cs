@@ -1,7 +1,7 @@
 ﻿using Azure.Core;
-using Core.Settings;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
+using SPLUS.Tenant.Infrastructure.Settings;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;

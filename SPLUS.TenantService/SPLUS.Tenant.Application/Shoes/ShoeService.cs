@@ -1,12 +1,12 @@
-﻿using Core.Entities;
-using Infrastructure.Persistence;
+﻿using Infrastructure.Persistence;
+using SPLUS.Tenant.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure.Services
+namespace SPLUS.Tenant.Application.Shoes
 {
     public interface IShoeService
     {

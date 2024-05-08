@@ -1575,14 +1575,14 @@
           }
         }
       },
-      "Core/1.0.0": {
+      "SPLUS.Tenant.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/Core.dll": {}
+          "bin/placeholder/SPLUS.Tenant.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Core.dll": {}
+          "bin/placeholder/SPLUS.Tenant.Domain.dll": {}
         }
       }
     }
@@ -4276,15 +4276,14 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Core/1.0.0": {
+    "SPLUS.Tenant.Domain/1.0.0": {
       "type": "project",
-      "path": "../Core/Core.csproj",
-      "msbuildProject": "../Core/Core.csproj"
+      "path": "../SPLUS.Tenant.Domain/SPLUS.Tenant.Domain.csproj",
+      "msbuildProject": "../SPLUS.Tenant.Domain/SPLUS.Tenant.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Core >= 1.0.0",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 8.0.4",
       "Microsoft.EntityFrameworkCore.Relational >= 8.0.4",
@@ -4294,7 +4293,8 @@
       "Microsoft.Extensions.Configuration.Abstractions >= 8.0.0",
       "Microsoft.Extensions.Configuration.Binder >= 8.0.1",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 8.0.1",
-      "Microsoft.Extensions.Options >= 8.0.2"
+      "Microsoft.Extensions.Options >= 8.0.2",
+      "SPLUS.Tenant.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4304,9 +4304,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\Infrastructure.csproj",
-      "projectName": "Infrastructure",
-      "projectPath": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\SPLUS.Tenant.Infrastructure.csproj",
+      "projectName": "SPLUS.Tenant.Infrastructure",
+      "projectPath": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\SPLUS.Tenant.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\vinhtt2\\.nuget\\packages\\",
       "outputPath": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
@@ -4330,8 +4330,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Core\\Core.csproj": {
-              "projectPath": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Core\\Core.csproj"
+            "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\SPLUS.Tenant.Domain\\SPLUS.Tenant.Domain.csproj": {
+              "projectPath": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\SPLUS.Tenant.Domain\\SPLUS.Tenant.Domain.csproj"
             }
           }
         }

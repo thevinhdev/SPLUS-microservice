@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Contracts
+namespace SPLUS.Tenant.Domain.Entities
 {
-    public interface IMustHaveTenant
+    public abstract class BaseEntity
     {
-        public string TenantId { get; set; }
+        public int Id { get; private set; }
     }
 }

@@ -1127,21 +1127,34 @@
           }
         }
       },
-      "Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Core.dll": {}
-        }
-      },
-      "Infrastructure/1.0.0": {
+      "SPLUS.Tenant.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Core": "1.0.0",
+          "SPLUS.Tenant.Domain": "1.0.0",
+          "SPLUS.Tenant.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SPLUS.Tenant.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SPLUS.Tenant.Application.dll": {}
+        }
+      },
+      "SPLUS.Tenant.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/SPLUS.Tenant.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SPLUS.Tenant.Domain.dll": {}
+        }
+      },
+      "SPLUS.Tenant.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "8.0.4",
           "Microsoft.EntityFrameworkCore.Relational": "8.0.4",
@@ -1150,13 +1163,14 @@
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Microsoft.Extensions.Configuration.Binder": "8.0.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1",
-          "Microsoft.Extensions.Options": "8.0.2"
+          "Microsoft.Extensions.Options": "8.0.2",
+          "SPLUS.Tenant.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Infrastructure.dll": {}
+          "bin/placeholder/SPLUS.Tenant.Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Infrastructure.dll": {}
+          "bin/placeholder/SPLUS.Tenant.Infrastructure.dll": {}
         }
       }
     }
@@ -3108,22 +3122,28 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Core/1.0.0": {
+    "SPLUS.Tenant.Application/1.0.0": {
       "type": "project",
-      "path": "../Core/Core.csproj",
-      "msbuildProject": "../Core/Core.csproj"
+      "path": "../SPLUS.Tenant.Application/SPLUS.Tenant.Application.csproj",
+      "msbuildProject": "../SPLUS.Tenant.Application/SPLUS.Tenant.Application.csproj"
     },
-    "Infrastructure/1.0.0": {
+    "SPLUS.Tenant.Domain/1.0.0": {
       "type": "project",
-      "path": "../Infrastructure/Infrastructure.csproj",
-      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+      "path": "../SPLUS.Tenant.Domain/SPLUS.Tenant.Domain.csproj",
+      "msbuildProject": "../SPLUS.Tenant.Domain/SPLUS.Tenant.Domain.csproj"
+    },
+    "SPLUS.Tenant.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/SPLUS.Tenant.Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/SPLUS.Tenant.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.4",
       "Microsoft.AspNetCore.OpenApi >= 8.0.4",
+      "SPLUS.Tenant.Application >= 1.0.0",
+      "SPLUS.Tenant.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -3160,8 +3180,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\Infrastructure.csproj"
+            "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\SPLUS.Tenant.Infrastructure.csproj": {
+              "projectPath": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\SPLUS.Tenant.Infrastructure.csproj"
+            },
+            "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\SPLUS.Tenant.Application\\SPLUS.Tenant.Application.csproj": {
+              "projectPath": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\SPLUS.Tenant.Application\\SPLUS.Tenant.Application.csproj"
             }
           }
         }

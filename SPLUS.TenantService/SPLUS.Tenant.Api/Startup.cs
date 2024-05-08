@@ -1,7 +1,9 @@
-﻿using Core.Settings;
-using Infrastructure.Services;
+﻿using Infrastructure.Services;
 using Microsoft.OpenApi.Models;
 using Infrastructure.Extensions;
+using SPLUS.Tenant.Application.Products;
+using SPLUS.Tenant.Application.Shoes;
+using SPLUS.Tenant.Infrastructure.Settings;
 
 namespace SPLUS.Tenant.Api
 {
@@ -23,9 +25,9 @@ namespace SPLUS.Tenant.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Multitenant.Api", Version = "v1" });
             });
-            services.AddTransient<ITenantService, TenantService>();
-            services.AddTransient<IProductService, ProductService>();
-            services.AddTransient<IShoeService, ShoeService>();
+            services.AddScoped<ITenantService, TenantService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IShoeService, ShoeService>();
             services.Configure<TenantSettings>(config.GetSection(nameof(TenantSettings)));
             services.AddAndMigrateTenantDatabases(config);
         }

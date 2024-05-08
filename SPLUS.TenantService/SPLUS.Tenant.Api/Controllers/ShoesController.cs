@@ -1,5 +1,5 @@
-﻿using Infrastructure.Services;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using SPLUS.Tenant.Application.Shoes;
 
 namespace SPLUS.Tenant.Api.Controllers
 {

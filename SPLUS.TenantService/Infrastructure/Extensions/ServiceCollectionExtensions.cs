@@ -1,8 +1,8 @@
-﻿using Core.Settings;
-using Infrastructure.Persistence;
+﻿using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SPLUS.Tenant.Infrastructure.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;

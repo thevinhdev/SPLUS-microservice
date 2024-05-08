@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "80gNuxenLZqE9nDt7EWcP6OXijCCoFFoq+DyLDvGGXcg509bz2g3WW24EDNgcVi9cxsgT2PCrTNr2yBzmNFXPA==",
+  "dgSpecHash": "kVo6dIqc3HHE7gJQvgKFg+0lld8bq715porZFKH8wzZBls251dkZPkEu/xtgtNcJvKfAKM0OeZwXuwfRzNCUhw==",
   "success": true,
-  "projectFilePath": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "D:\\Project\\git\\SPLUS-microservice\\SPLUS.TenantService\\Infrastructure\\SPLUS.Tenant.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vinhtt2\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\vinhtt2\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

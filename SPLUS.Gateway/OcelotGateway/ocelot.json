@@ -3,6 +3,7 @@
     {
       "UpstreamPathTemplate": "/api-gateway/Auth",
       "UpstreamHttpMethod": [ "Post" ],
+      //"UpstreamHost": "10.84.249.1",
       "DownstreamScheme": "https",
       "DownstreamPathTemplate": "/api/Auth",
       "DownstreamHostAndPorts": [

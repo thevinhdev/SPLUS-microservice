@@ -1,6 +1,5 @@
 
 
-using Core.Settings;
 using Infrastructure.Services;
 using Infrastructure.Extensions;
 using SPLUS.Tenant.Api;
