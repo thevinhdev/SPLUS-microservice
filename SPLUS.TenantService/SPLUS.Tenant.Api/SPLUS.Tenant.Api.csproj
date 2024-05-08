@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Infrastructure\SPLUS.Tenant.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\..\domo2\SPLUS-microservice\SPLUS.CommonService\SPLUS.Common.Infrastructure\SPLUS.Tenant.Infrastructure.csproj" />
     <ProjectReference Include="..\SPLUS.Tenant.Application\SPLUS.Tenant.Application.csproj" />
   </ItemGroup>
 

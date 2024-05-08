@@ -1,5 +1,5 @@
-﻿using Infrastructure.Persistence;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using SPLUS.Common.Infrastructure.Persistence;
 using SPLUS.Tenant.Domain.Entities;
 using System;
 using System.Collections.Generic;

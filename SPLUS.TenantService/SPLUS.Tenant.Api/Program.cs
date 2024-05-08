@@ -1,7 +1,6 @@
 
 
-using Infrastructure.Services;
-using Infrastructure.Extensions;
+//using Infrastructure.Extensions;
 using SPLUS.Tenant.Api;
 
 //var builder = WebApplication.CreateBuilder(args);
