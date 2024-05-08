@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Connect database
 builder.Services.AddDbContext<CommonContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CommonContext")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SPLUSCommonDbContext")));
 builder.Services.AddScoped<IFeatureService, FeatureService>();
 
 builder.Services.AddControllers();
