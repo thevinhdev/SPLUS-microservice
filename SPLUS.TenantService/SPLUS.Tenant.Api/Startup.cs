@@ -1,9 +1,8 @@
 ﻿using Microsoft.OpenApi.Models;
-using Infrastructure.Extensions;
-using SPLUS.Common.Infrastructure.Services;
-using SPLUS.Common.Infrastructure.Settings;
+using SPLUS.Tenant.Infrastructure.Settings;
 using SPLUS.Tenant.Application.Products;
 using SPLUS.Tenant.Application.Shoes;
+using Infrastructure.Services;
 
 namespace SPLUS.Tenant.Api
 {

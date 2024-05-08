@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SPLUS.Common.Infrastructure.Persistence;
 using SPLUS.Tenant.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Infrastructure.Persistence;
 
 namespace SPLUS.Tenant.Application.Products
 {

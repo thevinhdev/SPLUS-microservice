@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\domo2\SPLUS-microservice\SPLUS.CommonService\SPLUS.Common.Infrastructure\SPLUS.Tenant.Infrastructure.csproj" />
     <ProjectReference Include="..\SPLUS.Tenant.Domain\SPLUS.Tenant.Domain.csproj" />
+    <ProjectReference Include="..\SPLUS.Tenant.Infrastructure\SPLUS.Tenant.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
