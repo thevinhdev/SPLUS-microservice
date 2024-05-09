@@ -5,7 +5,7 @@ namespace SPLUS.Common.Api.Controllers
 {
     [Route("api/v1/[controller]/")]
     [ApiController]
-    public class FeaturesController : Controller
+    public class FeaturesController : ControllerBase
     {
         private readonly IFeatureService _iFeatureService;
 
