@@ -18,11 +18,12 @@ internal class Program
 
         #region Authen
         var key = Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:JwtKey"]!);
+        string authenticationProviderKey = "TestKey";
         builder.Services.AddAuthentication(option =>
         {
-            option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            option.DefaultAuthenticateScheme = authenticationProviderKey;
             option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        }).AddJwtBearer(options =>
+        }).AddJwtBearer(authenticationProviderKey, options =>
         {
             options.RequireHttpsMetadata = false;
             options.SaveToken = true;

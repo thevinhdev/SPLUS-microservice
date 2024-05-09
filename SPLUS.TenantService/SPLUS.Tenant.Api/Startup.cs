@@ -4,6 +4,11 @@ using SPLUS.Tenant.Application.Products;
 using SPLUS.Tenant.Application.Shoes;
 using Infrastructure.Extensions;
 using Infrastructure.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.Extensions.Options;
 
 namespace SPLUS.Tenant.Api
 {
@@ -30,6 +35,28 @@ namespace SPLUS.Tenant.Api
             services.AddScoped<IShoeService, ShoeService>();
             services.Configure<TenantSettings>(config.GetSection(nameof(TenantSettings)));
             services.AddAndMigrateTenantDatabases(config);
+
+            #region Authen
+            var key = Encoding.UTF8.GetBytes(config["AppSettings:JwtKey"]!);
+            string authenticationProviderKey = "TestKey";
+            services.AddAuthentication(option =>
+            {
+                option.DefaultAuthenticateScheme = authenticationProviderKey;
+                option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+            }).AddJwtBearer(authenticationProviderKey, options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuerSigningKey = true,
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
