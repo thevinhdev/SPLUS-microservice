@@ -13,24 +13,25 @@
         }
       ]
     },
-    {
-      "UpstreamPathTemplate": "/api-gateway/Shoes/{id}",
-      "UpstreamHttpMethod": [ "Delete" ],
-      "DownstreamPathTemplate": "/api/Shoes/{id}",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5001
-        }
-      ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "Bearer"
-      }
-      //"RouteClaimsRequirement": {
-      //  "Role": "Administrator"
-      //}
-    },
+    //{
+    //  "UpstreamPathTemplate": "/api-gateway/Shoes/{id}",
+    //  "UpstreamHttpMethod": [ "Delete" ],
+    //  "DownstreamPathTemplate": "/api/Shoes/{id}",
+    //  "DownstreamScheme": "https",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5001
+    //    }
+    //  ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "Bearer",
+    //    "AllowedScopes": []
+    //  }
+    //  //"RouteClaimsRequirement": {
+    //  //  "Role": "Administrator"
+    //  //}
+    //},
     {
       "UpstreamPathTemplate": "/api-gateway/Products/{id}",
       "UpstreamHttpMethod": [ "Get" ],
@@ -44,7 +45,7 @@
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
-        //"AllowedScopes": [ "shoe.read" ]
+        //"AllowedScopes": []
       }
     },
     {
@@ -60,7 +61,7 @@
       ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer"
-        //"AllowedScopes": [ "shoe.read" ]
+        //"AllowedScopes": []
       }
     }
   ],

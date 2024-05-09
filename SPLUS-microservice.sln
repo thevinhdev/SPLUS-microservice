@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SPLUS.TenantService", "SPLU
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPLUS.Tenant.Api", "SPLUS.TenantService\SPLUS.Tenant.Api\SPLUS.Tenant.Api.csproj", "{8E6841BA-8C0E-4CA1-836D-A5A18ECAFCAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPLUS.Tenant.Application", "SPLUS.TenantService\SPLUS.Tenant.Application\SPLUS.Tenant.Application.csproj", "{C0463673-A481-4F88-A770-B2C943045D4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPLUS.Tenant.Application", "SPLUS.TenantService\SPLUS.Tenant.Application\SPLUS.Tenant.Application.csproj", "{C0463673-A481-4F88-A770-B2C943045D4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPLUS.Tenant.Domain", "SPLUS.TenantService\SPLUS.Tenant.Domain\SPLUS.Tenant.Domain.csproj", "{E2BDF9C5-C731-4D4C-9BCB-B6B772818748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPLUS.Tenant.Domain", "SPLUS.TenantService\SPLUS.Tenant.Domain\SPLUS.Tenant.Domain.csproj", "{E2BDF9C5-C731-4D4C-9BCB-B6B772818748}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPLUS.Tenant.Infrastructure", "SPLUS.TenantService\SPLUS.Tenant.Infrastructure\SPLUS.Tenant.Infrastructure.csproj", "{F98845B7-93F4-485F-A248-697F04A2EC6D}"
 EndProject

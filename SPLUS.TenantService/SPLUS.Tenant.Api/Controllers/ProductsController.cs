@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SPLUS.Tenant.Application.Products;
 
 namespace SPLUS.Tenant.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _service;
