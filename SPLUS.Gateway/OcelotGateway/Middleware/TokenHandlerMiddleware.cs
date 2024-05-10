@@ -25,28 +25,30 @@ namespace OcelotGateway.Middleware
             try
             {
                 string path = ctx.Request.Path;
-                if (path != "/api-gateway/Auth/GenerateToken" && path != "/api-gateway/Auth/GenerateRefreshToken")
-                {
-                    string token = ctx.Request.Headers.Authorization.ToString().Replace("Bearer ", "");
-                    if (string.IsNullOrEmpty(token))
-                        throw new UnauthorizedAccessException("Unauthorized");
+                //if (path != "/api-gateway/Auth/GenerateToken" && path != "/api-gateway/Auth/GenerateRefreshToken")
+                //{
+                //    string token = ctx.Request.Headers.Authorization.ToString().Replace("Bearer ", "");
+                //    if (string.IsNullOrEmpty(token))
+                //        throw new UnauthorizedAccessException("Unauthorized");
 
-                    // Refreshtoken
-                    string domain = _configuration["Token:EndPoint"]!;
-                    var url = domain + "/api/Auth/GenerateRefreshToken";
-                    var tokenRequest = new RefreshTokenModel
-                    {
-                        TokenRefresh = token
-                    };
-                    var jsonRequest = JsonConvert.SerializeObject(tokenRequest);
-                    var result = await PostAsync<ApiResponse>(url, jsonRequest);
-                    if (result != null && !string.IsNullOrEmpty(result.Token))
-                    {
-                        // Set new token to header and re-send request
-                        ctx.Request.Headers.Remove("Authorization");
-                        ctx.Request.Headers.Append("Authorization", "Bearer " + result.Token);
-                    }
-                }
+                //    // Validate token
+
+                //    // Refreshtoken
+                //    string domain = _configuration["Token:EndPoint"]!;
+                //    var url = domain + "/api/Auth/GenerateRefreshToken";
+                //    var tokenRequest = new RefreshTokenModel
+                //    {
+                //        TokenRefresh = token
+                //    };
+                //    var jsonRequest = JsonConvert.SerializeObject(tokenRequest);
+                //    var result = await PostAsync<ApiResponse>(url, jsonRequest);
+                //    if (result != null && !string.IsNullOrEmpty(result.Token))
+                //    {
+                //        // Set new token to header and re-send request
+                //        ctx.Request.Headers.Remove("Authorization");
+                //        ctx.Request.Headers.Append("Authorization", "Bearer " + result.Token);
+                //    }
+                //}
                 await next.Invoke();
             }
             catch (Exception)

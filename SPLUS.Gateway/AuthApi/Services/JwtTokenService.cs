@@ -1,5 +1,4 @@
 ﻿using AuthApi.Models;
-using JwtTokenAuthentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -7,11 +6,18 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AuthApi.Services
 {
     public class JwtTokenService
     {
+        private IConfiguration _config;
+        public JwtTokenService(IConfiguration config)
+        {
+            _config = config;
+        }
+
         private readonly List<User> _users = new()
         {
             new("admin", "123456", "Administrator", "", new[] { "shoes.read" }),
@@ -27,9 +33,10 @@ namespace AuthApi.Services
                 return null;
             }
 
-            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtExtensions.SecurityKey));
+            var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
+            //var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtExtensions.SecurityKey));
             var signingCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
-            var expirationTimeStamp = DateTime.Now.AddMinutes(5);
+            var expirationTimeStamp = DateTime.Now.AddSeconds(60);
 
             var claims = new List<Claim>
             {
@@ -56,8 +63,15 @@ namespace AuthApi.Services
         public AuthenticationToken? GenerateRefreshToken(RefreshTokenModel tokenModel)
         {
             //Chưa validate expired and username
+            string tokenRefresh = tokenModel.TokenRefresh;
+            bool isValidateToken = JwtExtensions.ValidateToken(tokenRefresh);
+            if(!isValidateToken)
+            {
+                throw new UnauthorizedAccessException("Unauthorized");
+            }
+
             var handler = new JwtSecurityTokenHandler();
-            var token = handler.ReadToken(tokenModel.TokenRefresh) as JwtSecurityToken;
+            var token = handler.ReadToken(tokenRefresh) as JwtSecurityToken;
             string tenant = token.Claims.First(claim => claim.Type == "tenant").Value;
             string name = token.Claims.First(claim => claim.Type == "name").Value;
 

@@ -6,7 +6,6 @@ namespace SPLUS.Tenant.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
     public class ShoesController : ControllerBase
     {
         private readonly IShoeService _service;
@@ -16,6 +15,7 @@ namespace SPLUS.Tenant.Api.Controllers
             _service = service;
         }
 
+        [Authorize]
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetAsync(int id)
         {

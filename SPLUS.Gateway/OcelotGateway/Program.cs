@@ -20,24 +20,24 @@ internal class Program
         builder.Configuration.AddJsonFile("ocelot.json");
 
         #region Authen
-        var key = Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:JwtKey"]!);
-        string authenticationProviderKey = "TestKey";
-        builder.Services.AddAuthentication(option =>
-        {
-            option.DefaultAuthenticateScheme = authenticationProviderKey;
-            option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        }).AddJwtBearer(authenticationProviderKey, options =>
-        {
-            options.RequireHttpsMetadata = false;
-            options.SaveToken = true;
-            options.TokenValidationParameters = new TokenValidationParameters
-            {
-                IssuerSigningKey = new SymmetricSecurityKey(key),
-                ValidateIssuerSigningKey = true,
-                ValidateIssuer = false,
-                ValidateAudience = false
-            };
-        });
+        //var key = Encoding.UTF8.GetBytes(builder.Configuration["AppSettings:JwtKey"]!);
+        //string authenticationProviderKey = "TestKey";
+        //builder.Services.AddAuthentication(option =>
+        //{
+        //    option.DefaultAuthenticateScheme = authenticationProviderKey;
+        //    option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        //}).AddJwtBearer(authenticationProviderKey, options =>
+        //{
+        //    options.RequireHttpsMetadata = false;
+        //    options.SaveToken = true;
+        //    options.TokenValidationParameters = new TokenValidationParameters
+        //    {
+        //        IssuerSigningKey = new SymmetricSecurityKey(key),
+        //        ValidateIssuerSigningKey = true,
+        //        ValidateIssuer = true,
+        //        ValidateAudience = false
+        //    };
+        //});
         #endregion
 
         builder.Services.AddOcelot(builder.Configuration);

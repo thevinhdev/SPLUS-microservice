@@ -38,13 +38,12 @@ namespace SPLUS.Tenant.Api
 
             #region Authen
             var key = Encoding.UTF8.GetBytes(config["AppSettings:JwtKey"]!);
-            string authenticationProviderKey = "TestKey";
             services.AddAuthentication(option =>
             {
-                option.DefaultAuthenticateScheme = authenticationProviderKey;
+                option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 
-            }).AddJwtBearer(authenticationProviderKey, options =>
+            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
             {
                 options.RequireHttpsMetadata = false;
                 options.SaveToken = true;
@@ -73,6 +72,7 @@ namespace SPLUS.Tenant.Api
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -1,5 +1,6 @@
 ﻿using AuthApi.Models;
 using AuthApi.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthApi.Controllers
@@ -23,6 +24,7 @@ namespace AuthApi.Controllers
             return loginResult is null ? Unauthorized() : Ok(loginResult);
         }
 
+        [Authorize]
         [HttpPost("GenerateRefreshToken")]
         public IActionResult GenerateRefreshToken(RefreshTokenModel tokenModel)
         {
