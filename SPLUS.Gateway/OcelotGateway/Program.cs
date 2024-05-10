@@ -1,10 +1,13 @@
+using CacheManager.Core;
 using JwtTokenAuthentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using OcelotGateway.Middleware;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Text;
 
 internal class Program
@@ -43,7 +46,7 @@ internal class Program
 
         var app = builder.Build();
 
-        await app.UseOcelot();
+        await app.UseOcelot(new TokenHandlerMiddleware(builder.Configuration));
 
         app.UseAuthentication();
         app.UseAuthorization();

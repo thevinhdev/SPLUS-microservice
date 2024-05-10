@@ -1,11 +1,24 @@
 ﻿{
   "Routes": [
     {
-      "UpstreamPathTemplate": "/api-gateway/Auth",
+      "UpstreamPathTemplate": "/api-gateway/Auth/GenerateToken",
       "UpstreamHttpMethod": [ "Post" ],
       //"UpstreamHost": "10.84.249.1",
       "DownstreamScheme": "https",
-      "DownstreamPathTemplate": "/api/Auth",
+      "DownstreamPathTemplate": "/api/Auth/GenerateToken",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/api-gateway/Auth/GenerateRefreshToken",
+      "UpstreamHttpMethod": [ "Post" ],
+      //"UpstreamHost": "10.84.249.1",
+      "DownstreamScheme": "https",
+      "DownstreamPathTemplate": "/api/Auth/GenerateRefreshToken",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",

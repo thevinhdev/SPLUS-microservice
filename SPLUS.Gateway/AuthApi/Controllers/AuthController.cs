@@ -1,4 +1,5 @@
 ﻿using AuthApi.Models;
+using AuthApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AuthApi.Controllers
@@ -14,10 +15,18 @@ namespace AuthApi.Controllers
             _jwtTokenService = jwtTokenService;
         }
 
-        [HttpPost]
-        public IActionResult Login([FromBody] LoginModel user)
+        [HttpPost("GenerateToken")]
+        public IActionResult GenerateToken([FromBody] LoginModel user)
         {
             var loginResult = _jwtTokenService.GenerateAuthToken(user);
+
+            return loginResult is null ? Unauthorized() : Ok(loginResult);
+        }
+
+        [HttpPost("GenerateRefreshToken")]
+        public IActionResult GenerateRefreshToken(RefreshTokenModel tokenModel)
+        {
+            var loginResult = _jwtTokenService.GenerateRefreshToken(tokenModel);
 
             return loginResult is null ? Unauthorized() : Ok(loginResult);
         }

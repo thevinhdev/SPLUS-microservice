@@ -1,4 +1,4 @@
-using AuthApi;
+using AuthApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
