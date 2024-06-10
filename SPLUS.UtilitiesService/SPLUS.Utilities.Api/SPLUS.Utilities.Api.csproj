@@ -21,6 +21,7 @@
     <ProjectReference Include="..\..\SPLUS.Shared\SPLUS.Shared.Commons\SPLUS.Shared.Commons.csproj" />
     <ProjectReference Include="..\..\SPLUS.Shared\SPLUS.Shared.ViewModels\SPLUS.Shared.ViewModels.csproj" />
     <ProjectReference Include="..\SPLUS.Utilities.Application\SPLUS.Utilities.Application.csproj" />
+    <ProjectReference Include="..\SPLUS.Utilities.Infrastructure\SPLUS.Utilities.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

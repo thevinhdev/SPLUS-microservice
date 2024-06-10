@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace SPLUS.Utilities.Application.Services
 {
-    public interface IRequestCleaningService
+    public interface IShoeService
     {
-        Task<Shoe> GetShoeById(int shoeId);
+        public Shoe GetShoeById(int id);
     }
-    public class RequestCleaningService
+    public class ShoeService : IShoeService
     {
-        public async Task<Shoe> GetShoeById(int shoeId)
+        public Shoe GetShoeById(int id)
         {
             Shoe shoe = new()
             {
-                Id = shoeId,
+                Id = id,
                 Brand = "abc",
                 Name = "abc"
             };

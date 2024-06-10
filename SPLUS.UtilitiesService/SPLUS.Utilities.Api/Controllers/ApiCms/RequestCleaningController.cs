@@ -7,18 +7,18 @@ namespace SPLUS.Utilities.Api.Controllers.ApiCms
 {
     public class RequestCleaningController : BaseController
     {
-        private readonly IRequestCleaningService _iRequestCleaningService;
+        private readonly IShoeService _iShoeService;
 
-        public RequestCleaningController(IRequestCleaningService iRequestCleaningService)
+        public RequestCleaningController(IShoeService iShoeService)
         {
-            _iRequestCleaningService = iRequestCleaningService;
+            _iShoeService = iShoeService;
         }
 
         [HttpGet("GetShoeById")]
         public Output<Shoe> GetShoeById()
         {
-            var resData = _iRequestCleaningService.GetShoeById(1);
-            return Res(resData);
+            var resData = _iShoeService.GetShoeById(1);
+            return Res(resData, 0, "", 0);
         }
     }
 }
