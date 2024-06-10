@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>540b7319-63fa-4bff-846f-4d3bfcd306ec</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+	<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SPLUS.Shared\SPLUS.Shared.Commons\SPLUS.Shared.Commons.csproj" />
+    <ProjectReference Include="..\..\SPLUS.Shared\SPLUS.Shared.ViewModels\SPLUS.Shared.ViewModels.csproj" />
+    <ProjectReference Include="..\SPLUS.Utilities.Application\SPLUS.Utilities.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\ApiApp\" />
+  </ItemGroup>
+
+</Project>
