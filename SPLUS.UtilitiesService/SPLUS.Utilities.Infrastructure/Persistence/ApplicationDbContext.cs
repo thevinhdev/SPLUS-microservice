@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using SPLUS.Utilities.Domain.Entities;
+using SPLUS.Utilities.Infrastructure.Contracts;
+using SPLUS.Utilities.Infrastructure.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
