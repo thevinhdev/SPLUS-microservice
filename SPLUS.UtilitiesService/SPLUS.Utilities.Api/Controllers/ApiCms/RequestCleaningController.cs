@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SPLUS.Utilities.Application.Services;
+using SPLUS.Utilities.Application.Services.RequestCleaningService;
 using SPLUS.Utilities.Domain.Entities;
 
 namespace SPLUS.Utilities.Api.Controllers.ApiCms
@@ -8,11 +9,13 @@ namespace SPLUS.Utilities.Api.Controllers.ApiCms
     {
         private readonly ILogger _logger;
         private readonly IShoeService _iShoeService;
+        private readonly IRequestCleaningService _iRequestCleaningService;
 
-        public RequestCleaningController(IShoeService iShoeService)
+        public RequestCleaningController(IShoeService iShoeService, IRequestCleaningService iRequestCleaningService)
         {
             //_logger = logger;
             _iShoeService = iShoeService;
+            _iRequestCleaningService = iRequestCleaningService;
         }
 
         [HttpGet("GetShoeById")]
@@ -23,7 +26,7 @@ namespace SPLUS.Utilities.Api.Controllers.ApiCms
         }
 
         /// <summary>
-        /// Xem hóa đơn điện
+        /// GetRequestCleaningServiceById
         /// </summary>
         /// <param name="hoadon"></param>
         /// <returns></returns>
@@ -42,7 +45,12 @@ namespace SPLUS.Utilities.Api.Controllers.ApiCms
         //    }
         //}
 
-        //[HttpPost]
-        //public async Task<IActionResult> DanhSachLichGCS(PagingInput<DanhSachLichGCS_FilterInput> input) => await MakeAjaxResponse(_iCS_LichGCS_Service.DanhSachLichGCS(input));
+        /// <summary>
+        /// GetRequestCleaningServiceById
+        /// </summary>
+        /// <param name="requestCleaningServiceId">Loại hóa đơn id</param>
+        /// <returns></returns>
+        [HttpGet("GetRequestCleaningServiceById/{requestCleaningServiceId}")]
+        public async Task<IActionResult> GetRequestCleaningServiceById(int requestCleaningServiceId) => await MakeAjaxResponse(_iRequestCleaningService.GetRequestCleaningServiceById(requestCleaningServiceId));
     }
 }

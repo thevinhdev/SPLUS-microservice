@@ -19,7 +19,7 @@ namespace SPLUS.Utilities.Application.Services.RequestCleaningService
         public async Task<RequestCleaningServiceDto> GetRequestCleaningServiceById(int requestCleaningServiceId)
         {
             var reqCleaningService = _dbContext.RequestCleaningService.Where(x => x.Id == requestCleaningServiceId).First();
-            RequestCleaningServiceDto resDto = new()
+            RequestCleaningServiceDto resRequestCleaningServiceDto = new()
             {
                 Id = reqCleaningService.Id,
                 ProjectCode = reqCleaningService.ProjectCode,
@@ -37,7 +37,7 @@ namespace SPLUS.Utilities.Application.Services.RequestCleaningService
                 UpdatedById = reqCleaningService.UpdatedById,
                 UpdatedAt = reqCleaningService.UpdatedAt,
             };
-            return resDto;
+            return resRequestCleaningServiceDto;
         }
 
         public async Task<Shoe> GetShoeById(int shoeId)
