@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SPLUS.Utilities.Domain.Models.Commons
+namespace SPLUS.Utilities.Application.Models.Commons
 {
     public class ErrorViewModel
     {

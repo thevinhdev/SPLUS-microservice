@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SPLUS.Utilities.Application.Services;
 using SPLUS.Utilities.Domain.Entities;
-using SPLUS.Utilities.Domain.Models.Commons.Interfaces;
 
 namespace SPLUS.Utilities.Api.Controllers.ApiCms
 {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SPLUS.Utilities.Domain.Models.Commons.Interfaces
+namespace SPLUS.Utilities.Application.Models.Commons.Interfaces
 {
     public interface IPagedResult<TDataResult>
     {

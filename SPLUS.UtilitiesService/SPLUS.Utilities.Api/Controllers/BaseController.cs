@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using SPLUS.Shared.Commons.Constants;
 using SPLUS.Shared.ViewModels;
-using SPLUS.Utilities.Domain.Models.Commons;
+using SPLUS.Utilities.Application.Models.Commons;
 
 namespace SPLUS.Utilities.Api.Controllers
 {

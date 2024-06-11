@@ -5,13 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SPLUS.Utilities.Application.Services
+namespace SPLUS.Utilities.Application.Services.RequestCleaningService
 {
-    public interface IRequestCleaningService
-    {
-        Task<Shoe> GetShoeById(int shoeId);
-    }
-    public class RequestCleaningService
+    public class RequestCleaningService : IRequestCleaningService
     {
         public async Task<Shoe> GetShoeById(int shoeId)
         {
