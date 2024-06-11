@@ -7,7 +7,7 @@ namespace SPLUS.Utilities.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : BaseController
+    public class WeatherForecastController
     {
         private static readonly string[] Summaries = new[]
         {
