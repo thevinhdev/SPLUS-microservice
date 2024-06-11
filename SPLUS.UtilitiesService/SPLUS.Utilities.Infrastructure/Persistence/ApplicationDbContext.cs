@@ -23,6 +23,7 @@ namespace SPLUS.Utilities.Infrastructure.Persistence
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Shoe> Shoes { get; set; }
+        public DbSet<RequestCleaningService> RequestCleaningService { get; set; }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{

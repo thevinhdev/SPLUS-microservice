@@ -10,5 +10,6 @@ namespace SPLUS.Utilities.Application.Services.RequestCleaningService
     public interface IRequestCleaningService
     {
         Task<Shoe> GetShoeById(int shoeId);
+        Task<RequestCleaningService> GetRequestCleaningServiceById(int requestCleaningServiceId);
     }
 }
