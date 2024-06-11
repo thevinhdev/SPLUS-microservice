@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\SPLUS.Shared\SPLUS.Shared.Commons\SPLUS.Shared.Commons.csproj" />
     <ProjectReference Include="..\SPLUS.Utilities.Domain\SPLUS.Utilities.Domain.csproj" />
+    <ProjectReference Include="..\SPLUS.Utilities.Infrastructure\SPLUS.Utilities.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

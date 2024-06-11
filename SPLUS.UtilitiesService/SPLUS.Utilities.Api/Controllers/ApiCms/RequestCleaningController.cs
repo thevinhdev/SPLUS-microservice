@@ -5,6 +5,7 @@ using SPLUS.Utilities.Domain.Entities;
 
 namespace SPLUS.Utilities.Api.Controllers.ApiCms
 {
+    [Route("api/v1/Utilities/[controller]/")]
     public class RequestCleaningController : UtilitiesBaseController
     {
         private readonly ILogger _logger;

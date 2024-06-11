@@ -2,6 +2,7 @@
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using SPLUS.Utilities.Application.Services;
+using SPLUS.Utilities.Application.Services.RequestCleaningService;
 using SPLUS.Utilities.Infrastructure.Services;
 using SPLUS.Utilities.Infrastructure.Settings;
 using System.Text;
@@ -28,6 +29,7 @@ namespace SPLUS.Utilities.Api
             });
             services.AddScoped<ITenantService, TenantService>();
             services.AddScoped<IShoeService, ShoeService>();
+            services.AddScoped<IRequestCleaningService, RequestCleaningService>();
             services.Configure<TenantSettings>(config.GetSection(nameof(TenantSettings)));
             //services.AddAndMigrateTenantDatabases(config);
 

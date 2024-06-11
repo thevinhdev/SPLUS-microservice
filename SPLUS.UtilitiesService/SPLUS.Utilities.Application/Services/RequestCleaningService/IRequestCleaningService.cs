@@ -1,4 +1,5 @@
-﻿using SPLUS.Utilities.Domain.Entities;
+﻿using SPLUS.Utilities.Application.Models.RequestCleaningService;
+using SPLUS.Utilities.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,6 @@ namespace SPLUS.Utilities.Application.Services.RequestCleaningService
     public interface IRequestCleaningService
     {
         Task<Shoe> GetShoeById(int shoeId);
-        Task<RequestCleaningService> GetRequestCleaningServiceById(int requestCleaningServiceId);
+        Task<RequestCleaningServiceDto> GetRequestCleaningServiceById(int requestCleaningServiceId);
     }
 }
